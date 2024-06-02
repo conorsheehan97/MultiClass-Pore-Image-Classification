@@ -1,10 +1,37 @@
 # MultiClass-Pore-Image-Classification
-This project investigates the ability of a Convolutional Neural Network model to differentiate between 600 images of 3 different classes of pores.
+## Overview
+This project investigates the classification ability of a Convolutional Neural Network (CNN) model to differentiate between 600 images of pores belonging to 3 different classes. The images were manually labeled from microscope images, totaling 200 images per class. The goal is to evaluate how well the CNN can classify these images, similar to human neuron classification abilities.
 
-For this body of work 200 seperate images of 3 classes of pores were obtained, and manually labelled from microscope images. We want to see how good a CNN can classify these images, similar to how our own neurons did. For this, a CNN model consisting of convolutional layers, max pooling layers, random dropout layers, and fully connected layers was put together. We also used callback, which reduces the learning rate in case of no improvement, or just simply stops it. We then split our data into an 80/20 split, trained the model on an augmented training set. 
+## Methodology
+### Data Collection and Labeling:
+- Obtained 200 images per class of pores from microscope images and manually labeled them.
 
-We plotted our Training/Validation Loss/Accuracy, and then tested our final model on the test set we initially hid from the model. A confusion matrix was also used in order to compare what the model misclassified as what. 
+### Model Architecture:
+ - Built a CNN model consisting of convolutional layers, max pooling layers, random dropout layers for regularization, and fully connected layers for classification.
 
-Models used: Convolutional Neural Network
+### Training Strategy:
+ - Utilized callbacks to adjust learning rate on plateau or early stopping.
+ - Split data into 80/20 train-test sets and trained the model on an augmented training set to enhance generalization.
 
-Libraries used: Pandas, Numpy, Tensorflow, Keras, Scikitlearn, Matplotlib, Path, Random,
+### Evaluation:
+ - Plotted Training/Validation Loss and Accuracy curves to monitor model performance.
+ - Evaluated the final trained model on a previously unseen test set.
+ - Generated a confusion matrix to analyze classification errors and understand which classes the model misclassified.
+
+### Models Used
+ - Convolutional Neural Network (CNN)
+
+### Libraries Used
+ - Pandas
+ - Numpy
+ - Tensorflow
+ - Keras
+ - Scikit-learn
+ - Matplotlib
+ - Path (for file handling)
+ - Random (for data augmentation)
+
+## Conclusion
+This project demonstrates the application of a Convolutional Neural Network to classify pores in microscope images based on manually labeled data. By leveraging CNN architecture and training strategies, we achieved promising classification results. The use of augmentation techniques and callback functions enhanced model robustness and performance evaluation. Future work may involve fine-tuning the model architecture or exploring other deep learning techniques for further improvement.
+
+Contributions and feedback are welcome to enhance this project's capabilities and insights into automated classification tasks in microscopy.
